@@ -17,6 +17,8 @@ export default async function handler (request: NextApiRequest, response: NextAp
       }
     );
 
+    console.log(resp);
+
     if (!resp.ok) throw new Error("Failed to fetch movies");
 
     const moviesResponse = await resp.json();
